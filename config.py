@@ -1,3 +1,5 @@
 START_X = 0
 START_Y = 0
 START_Z = 0
+MODE_INTERVAL = 5
+MODE = None
