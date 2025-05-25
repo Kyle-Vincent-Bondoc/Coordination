@@ -12,31 +12,43 @@ moves = 0
 # Right
 def px():
   global x
+  global position
+  print(f"Moved Right. {position}")
   x += 1
   moves += 1
 # Left
 def nx():
   global x
+  global position
+  print(f"Moved Left. {position}")
   x -= 1
   moves += 1
 # Up
 def py():
   global y
+  global position
+  print(f"Moved Up. {position}")
   y += 1
   moves += 1
 # Down
 def ny():
   global y
+  global position
+  print(f"Moved Down. {position}")
   y -= 1
   moves += 1
 # Forward
 def pz():
   global z
+  global position
+  print(f"Moved Forward. {position}")
   z += 1
   moves += 1
 # Backward
 def nz():
   global z
+  global position
+  print(f"Moved Backward. {position}")
   z -= 1
   moves += 1
 
