@@ -6,11 +6,11 @@ def random_move(movesset):
   move = random.choice(moves)
   move()
 
-def automoverandom(movesset, interval=MODE_INTERVAL, extra)
+def automoverandom(movesset, interval=MODE_INTERVAL, extra):
     print("Starting automatic random movement every ", interval, " seconds.")
     try:
         while True:
-            random_move(moves)
+            random_move(movesset)
             print(extra)
             time.sleep(interval)
     except KeyboardInterrupt:
