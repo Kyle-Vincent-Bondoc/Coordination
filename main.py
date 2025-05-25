@@ -1,9 +1,10 @@
 import keyboard
+from config import *
 
 # Define Coordinate Variables
-x = 0
-y = 0
-z = 0
+x = START_X
+y = START_Y
+z = START_Z
 position = [x, y, z]
 moves = 0
 
