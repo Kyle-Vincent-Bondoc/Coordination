@@ -1,6 +1,6 @@
 import random
 import time
-from config import *
+from config import MODE_INTERVAL
 
 def random_move(movesset):
   move = random.choice(moves)
