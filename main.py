@@ -1,5 +1,7 @@
 import keyboard
 from config import *
+from auto.patternauto import *
+from auto.randomauto import *
 
 # Define Coordinate Variables
 x = START_X
@@ -7,6 +9,7 @@ y = START_Y
 z = START_Z
 position = [x, y, z]
 moves = 0
+movesset = [px, py, pz, nx, ny, nz]
 
 # Define Moving Functions
 # Right
@@ -62,6 +65,12 @@ def teleport():
   position = [x, y, z]
   return f"New Position is: {position}"
 
+# Add Mode Selection
+if MODE is not None:
+  if MODE == "Random":
+    automoverandom(movesset, position)
+  elif MODE == "Pattern":
+    pattern_move(movesset, position)
 # Define Keyboard Hotkeys
 keyboard.add_hotkey('q', px)
 keyboard.add_hotkey('w', nx)
