@@ -2,11 +2,11 @@ import random
 import time
 from config import *
 
-def random_move(moves):
+def random_move(movesset):
   move = random.choice(moves)
   move()
 
-def automoverandom(moves, interval=MODE_INTERVAL, extra)
+def automoverandom(movesset, interval=MODE_INTERVAL, extra)
     print("Starting automatic random movement every ", interval, " seconds.")
     try:
         while True:
