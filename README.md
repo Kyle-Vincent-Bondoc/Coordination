@@ -27,6 +27,6 @@ Hello, My name is **Kyle** and this is my first github project.
 
 ---
 
-Run this in your terminal:
+Run this in your terminal (if you use windows) :
 ```bash
 python main.py
