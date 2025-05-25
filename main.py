@@ -1,5 +1,6 @@
 import keyboard
 from config import *
+from randomauto import *
 
 # Define Coordinate Variables
 x = START_X
@@ -7,6 +8,7 @@ y = START_Y
 z = START_Z
 position = [x, y, z]
 moves = 0
+movesset = [px, py, pz, nx, ny, nz]
 
 # Define Moving Functions
 # Right
@@ -73,6 +75,11 @@ def teleport():
   z = teleport_position_z
   position = [x, y, z]
   return f"New Position is: {position}"
+
+# Mode Selection
+if MODE is not None:
+  if MODE == "Random":
+    automoverandom(movesset, position)
 
 # Define Keyboard Hotkeys
 keyboard.add_hotkey('q', px)
