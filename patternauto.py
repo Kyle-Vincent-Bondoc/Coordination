@@ -7,8 +7,7 @@ def pattern_move(movesset, interval=MODE_INTERVAL, extra):
         while True:
             for move in movesset:
                 move()
-                if extra is not None:
-                    print(extra)
+                print(extra)
                 time.sleep(interval)
     except KeyboardInterrupt:
         print("\nPattern movement stopped by user.")
