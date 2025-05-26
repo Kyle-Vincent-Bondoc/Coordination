@@ -15,3 +15,9 @@ BOUNDARY_NZ = -100
 VISION_RANGE = 10
 CENTERED = False
 MATH_MODE_EQUATION = "9^8 / 10 - 20"
+DEV_MODE = True
+if DEV_MODE == True:
+  try:
+    print("config.py working")
+  except:
+    print("Oopsie, Theres an error!")
