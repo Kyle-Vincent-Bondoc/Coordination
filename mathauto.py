@@ -1,17 +1,20 @@
-from config import MATH_MODE_EQUATION
+import time
+from config import MODE_INTERVAL, MATH_MODE_EQUATION
 
-def create_pattern_function(expr: str=MATH_MODE_EQUATION):
-    expr = expr.replace("^", "**")  # Support ^ as exponent
-    def pattern(n):
-        try:
-            return eval(expr, {"n": n, "math": math})
-        except Exception as e:
-            print("Error in pattern:", e)
-            return 0
-    return pattern
+def math_move(movesset, step):
+    transformed_step = eval(MATH_MODE_EQUATION, {"step": step})
+    move_index = transformed_step % 6
+    movesset[move_index]()
 
-def func(n, pattern_func):
-    value = pattern_func(n)
-    rounded = round(value)
-    index = (rounded - 1) % 6
-    return functions[index]()
+def automovemath(movesset, interval=MODE_INTERVAL, extra=None):
+    print("Starting math-based automatic movement every", interval, "seconds.")
+    step = 0
+    try:
+        while True:
+            math_move(movesset, step)
+            if extra is not None:
+                print("Current Position:", extra)  # Just print the list directly
+            step += 1
+            time.sleep(interval)
+    except KeyboardInterrupt:
+        print("\nMath auto movement stopped by user.")
