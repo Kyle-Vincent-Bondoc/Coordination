@@ -2,6 +2,7 @@ import keyboard
 from config import *
 from auto.patternauto import *
 from auto.randomauto import *
+from auto.mathauto import *
 
 # Define Coordinate Variables
 x = START_X
@@ -67,10 +68,18 @@ def teleport():
 
 # Add Mode Selection
 if MODE is not None:
-  if MODE == "Random":
-    automoverandom(movesset, position)
-  elif MODE == "Pattern":
-    pattern_move(movesset, position)
+  try:
+    if MODE == "Random":
+      automoverandom(movesset, position)
+    elif MODE == "Pattern":
+      pattern_move(movesset, position)
+    elif MODE == "Math":
+      automovemath(movesset, position)
+    else:
+      print("invalid mode")
+  except:
+    print("Oopsie! Error in Code")
+  
 # Define Keyboard Hotkeys
 keyboard.add_hotkey('q', px)
 keyboard.add_hotkey('w', nx)
