@@ -29,4 +29,11 @@ Hello, My name is **Kyle** and this is my first github project.
 
 Run this in your terminal (if you use windows) :
 ```bash
+pip install -r requirements.txt
+```
+You can just install them 1 by one manually.
+Then run this:
+```bash
 python main.py
+```
+and then You're Done!
