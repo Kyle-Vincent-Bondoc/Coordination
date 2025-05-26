@@ -6,7 +6,7 @@ def math_move(movesset, step):
     move_index = transformed_step % 6
     movesset[move_index]()
 
-def automovemath(movesset, interval=MODE_INTERVAL, extra=None):
+def automovemath(movesset, interval=MODE_INTERVAL, extra):
     print("Starting math-based automatic movement every", interval, "seconds.")
     step = 0
     try:
