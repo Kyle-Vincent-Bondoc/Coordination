@@ -19,5 +19,13 @@
 3. Install any dependencies (if listed in `requirements.txt`)
 4. Run the project:
 
+---
+
+## Creator Notes
+
+Hi, My name is **Kyle** and this is my first github project.
+
+Just run the project using this line:
+
 ```bash
 python main.py
