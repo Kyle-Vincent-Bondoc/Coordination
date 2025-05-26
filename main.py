@@ -79,6 +79,21 @@ if MODE is not None:
       print("invalid mode")
   except:
     print("Oopsie! Error in Code")
+
+# Add Boundaries
+if BOUNDARIES is not False:
+  if x > BOUNDARY_PX:
+    x = BOUNDARY_PX
+  elif x < BOUNDARY_NX:
+    x = BOUNDARY_NX
+  if y > BOUNDARY_PY:
+    y = BOUNDARY_PY
+  elif y < BOUNDARY_NY:
+    y = BOUNDARY_NY
+  if z > BOUNDARY_PZ:
+    z = BOUNDARY_PZ
+  elif z < BOUNDARY_NZ:
+    z = BOUNDARY_NZ
   
 # Define Keyboard Hotkeys
 keyboard.add_hotkey('q', px)
@@ -90,3 +105,13 @@ keyboard.add_hotkey('y', nz)
 keyboard.add_hotkey('shift + ctrl + p', show_coords)
 keyboard.add_hotkey('shift + ctrl + m', show_moves)
 keyboard.add_hotkey('shift + ctrl + t', teleport)
+
+def main():
+    print("Press ESC to quit.")
+    while True:
+        if keyboard.is_pressed('esc'):
+            print("Exiting...")
+            break
+
+if __name__ == "__main__":
+  main()
